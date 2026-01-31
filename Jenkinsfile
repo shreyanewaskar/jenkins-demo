@@ -4,7 +4,7 @@ pipeline{
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello version 2'
+                echo 'Hello version 21'
                 // Add build steps here
             }
         }
