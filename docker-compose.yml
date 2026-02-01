@@ -1,0 +1,35 @@
+version: '3.9'
+
+services:
+  vartaverse-all-in-one:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vartaverse-complete
+    restart: always
+    ports:
+      - "80:80"           # Frontend (Nginx)
+      - "3306:3306"       # MySQL Database
+      - "8761:8761"       # Eureka Service Discovery
+      - "8082:8082"       # Content Service
+      - "8083:8083"       # User Service
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - supervisor_logs:/var/log/supervisor
+    environment:
+      - MYSQL_ROOT_PASSWORD=s1977*
+      - MYSQL_DATABASE=vartaverse
+      - MYSQL_USER=appuser
+      - MYSQL_PASSWORD=apppass
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:80", "&&", "curl", "-f", "http://localhost:8761", "&&", "mysqladmin", "ping", "-h", "localhost"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+volumes:
+  mysql_data:
+    driver: local
+  supervisor_logs:
+    driver: local

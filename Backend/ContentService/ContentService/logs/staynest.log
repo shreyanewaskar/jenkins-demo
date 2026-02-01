@@ -1,0 +1,42 @@
+2026-01-10T09:51:47.807+05:30  INFO 19880 --- [ContentService] [restartedMain] c.m.V.C.ContentServiceApplication        : No active profile set, falling back to 1 default profile: "default"
+2026-01-10T09:51:50.129+05:30  INFO 19880 --- [ContentService] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-10T09:51:50.394+05:30  INFO 19880 --- [ContentService] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 237 ms. Found 4 JPA repository interfaces.
+2026-01-10T09:51:50.969+05:30  INFO 19880 --- [ContentService] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=da832c8d-d404-388a-9903-5584dff05f29
+2026-01-10T09:51:52.016+05:30  INFO 19880 --- [ContentService] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8082 (http)
+2026-01-10T09:51:52.058+05:30  INFO 19880 --- [ContentService] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-10T09:51:52.060+05:30  INFO 19880 --- [ContentService] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2026-01-10T09:51:52.202+05:30  INFO 19880 --- [ContentService] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-01-10T09:51:52.204+05:30  INFO 19880 --- [ContentService] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4342 ms
+2026-01-10T09:51:52.791+05:30  INFO 19880 --- [ContentService] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-10T09:51:52.894+05:30  INFO 19880 --- [ContentService] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.29.Final
+2026-01-10T09:51:52.983+05:30  INFO 19880 --- [ContentService] [restartedMain] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-10T09:51:53.537+05:30  INFO 19880 --- [ContentService] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-10T09:51:53.601+05:30  INFO 19880 --- [ContentService] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-10T09:51:54.119+05:30  INFO 19880 --- [ContentService] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3801ef75
+2026-01-10T09:51:54.123+05:30  INFO 19880 --- [ContentService] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-10T09:51:54.208+05:30  WARN 19880 --- [ContentService] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-10T09:51:54.211+05:30  WARN 19880 --- [ContentService] [restartedMain] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2026-01-10T09:51:54.260+05:30  INFO 19880 --- [ContentService] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-10T09:51:55.600+05:30  INFO 19880 --- [ContentService] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-10T09:51:55.745+05:30  INFO 19880 --- [ContentService] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-10T09:51:57.274+05:30  WARN 19880 --- [ContentService] [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-10T09:51:57.335+05:30  WARN 19880 --- [ContentService] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-01-10T09:51:58.294+05:30  INFO 19880 --- [ContentService] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
+2026-01-10T09:51:58.372+05:30  INFO 19880 --- [ContentService] [restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-01-10T09:51:58.617+05:30  INFO 19880 --- [ContentService] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2026-01-10T09:52:00.215+05:30  INFO 19880 --- [ContentService] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-01-10T09:52:00.272+05:30  WARN 19880 --- [ContentService] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-01-10T09:52:00.435+05:30  INFO 19880 --- [ContentService] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8082 (http) with context path '/'
+2026-01-10T09:52:01.446+05:30  INFO 19880 --- [ContentService] [restartedMain] o.s.cloud.commons.util.InetUtils         : Cannot determine local hostname
+2026-01-10T09:52:01.483+05:30  INFO 19880 --- [ContentService] [restartedMain] c.m.V.C.ContentServiceApplication        : Started ContentServiceApplication in 17.399 seconds (process running for 19.009)
+2026-01-10T09:52:26.453+05:30  INFO 19880 --- [ContentService] [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-01-10T09:52:26.454+05:30  INFO 19880 --- [ContentService] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-01-10T09:52:26.457+05:30  INFO 19880 --- [ContentService] [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2026-01-10T11:12:44.636+05:30  WARN 19880 --- [ContentService] [HikariPool-1:housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=36m49s835ms129µs100ns).
