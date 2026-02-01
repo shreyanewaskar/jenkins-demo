@@ -8,32 +8,13 @@ pipeline {
 
     stages {
 
-        stage('Try') {
-            steps {
-                echo "Hello, pipeline started"
-            }
-        }
-
-        stage('Checkout Code') {
-            steps {
-                git branch: 'main', url: 'https://github.com/shreyanewaskar/jenkins-demo.git'
-            }
-        }
-
-        stage('Build Docker Image') {
-            steps {
-                script {
-                    echo "Building Docker image..."
-                    docker.build("${IMAGE_NAME}:${IMAGE_TAG}")
-                }
-            }
-        }
-
         stage('Push Docker Image') {
             steps {
                 script {
+                    echo "Pushing existing Docker image to Docker Hub..."
+                    def image = docker.image("${IMAGE_NAME}:${IMAGE_TAG}")
                     docker.withRegistry('https://index.docker.io/v1/', 'shreyanewaskar27') {
-                        docker.image("${IMAGE_NAME}:${IMAGE_TAG}").push()
+                        image.push()
                     }
                 }
             }
@@ -41,7 +22,7 @@ pipeline {
     }
 
     post {
-        success { echo "Docker image successfully built and pushed 🚀" }
+        success { echo "Docker image successfully pushed 🚀" }
         failure { echo "Pipeline failed ❌" }
     }
 }
